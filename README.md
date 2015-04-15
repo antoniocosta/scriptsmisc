@@ -1,2 +1,2 @@
-# scripts-misc
+# scriptsmisc
 Miscellaneous Scripts
