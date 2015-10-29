@@ -13,7 +13,7 @@ echo "Deleting file from device..."
 $ADB shell rm -r "/sdcard/$FILENAME"
 
 echo "Launching Photoshop CC..."
-open -a "/Applications/Adobe Photoshop CC 2014/Adobe Photoshop CC 2014.app" "$HOME/Desktop/$FILENAME"
+open -a "/Applications/Adobe Photoshop CC 2015/Adobe Photoshop CC 2015.app" "$HOME/Desktop/$FILENAME"
 
 echo "Finished."
 osascript -e 'tell application "Terminal" to close (every window whose name contains "androidToPhotoshop.command")' &
