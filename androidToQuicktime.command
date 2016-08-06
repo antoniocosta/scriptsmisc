@@ -2,10 +2,11 @@
 
 DATE=`date "+%Y-%m-%d at %H.%M.%S"`
 FILENAME="Screen Recording "$DATE".mp4"
+FILENAME_ESCAPED=$(printf %q "$FILENAME")
 ADB=`command -v adb`
 
 #$ADB shell screenrecord --verbose "/sdcard/$FILENAME" &
-$ADB shell screenrecord "/sdcard/$FILENAME" &
+$ADB shell screenrecord "/sdcard/$FILENAME_ESCAPED" &
 
 PID_REC=$!
 
@@ -21,7 +22,7 @@ echo "Copying file to desktop..."
 $ADB pull "/sdcard/$FILENAME" "$HOME/Desktop/$FILENAME"
 
 echo "Deleting file from device..."
-$ADB shell rm -r "/sdcard/$FILENAME"
+$ADB shell rm -r "/sdcard/$FILENAME_ESCAPED"
 
 echo "Launching QuickTime Player..."
 open -a "/Applications/QuickTime Player.app" "$HOME/Desktop/$FILENAME"
