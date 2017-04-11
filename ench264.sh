@@ -9,7 +9,7 @@ fi
 
 # Use $2 if defined AND NOT EMPTY otherwise use 18 
 QUALITY=${2-18} 
-# Use same filename for .webm
+# Use same filename for .mp4
 OUTPUT=$(echo $1 | cut -f 1 -d '.').mp4
 
 echo "Converting..."
