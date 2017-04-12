@@ -20,3 +20,8 @@ Converts video to h264 (using ffmpeg).
 #### encwebm.sh
 Converts video to webm (using ffmpeg).
 
+#### pyserver.sh
+Start a python simple http server on port 80.
+
+#### sketchpreview.sh
+Export all artboards for all .sketch files found in a folder, for quick preview.
