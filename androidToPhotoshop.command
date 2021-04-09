@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Shell script for OSX to screengrab from and Android device, save PNG to desktop and open in Photoshop.
+# (Before using make sure adb is installed and developer mode & USB debugging are enabled on Android device)
+
 DATE=`date "+%Y-%m-%d at %H.%M.%S"`
 FILENAME="Screen Shot "$DATE".png"
 FILENAME_ESCAPED=$(printf %q "$FILENAME")
